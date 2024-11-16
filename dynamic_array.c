@@ -20,11 +20,6 @@ int DInitialize( DynamicArray* array, size_t element_size, int capacity )
 
 int DAdd( DynamicArray* array, void* object )
 {
-    if (sizeof(object) != array->element_size)
-    {
-        return INVALID_OBJECT;
-    }
-
     if (array->capacity <= array->size)
     {
         // We need to dynamically allocate more space for this array.

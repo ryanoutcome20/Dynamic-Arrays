@@ -13,13 +13,8 @@ enum DReturns
    // You gave a number out of bounds.
    OUT_OF_BOUNDS = 3,
 
-   // You gave an object that doesn't equal the element_size.
-   // Typically happens when you give an object the array was
-   // not made for.
-   INVALID_OBJECT = 4,
-
    // The array is empty.
-   EMPTY = 5
+   EMPTY = 4
 };
 
 typedef struct {
