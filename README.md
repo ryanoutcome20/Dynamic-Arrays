@@ -31,7 +31,7 @@ Afterwhich ensure your compiler supports the C99 or newer standard. Use the -std
 
 ### Usage
 
-For a full usage documentation refer to both the *tests* folder and documentation. Full documentation is auto-generated using [Doxygen](https://www.doxygen.nl/manual/starting.html). See the docs folder or generate it yourself using the provided Doxyfile.
+For a full usage documentation refer to both the *tests* folder and documentation. Full documentation is auto-generated using [Doxygen](https://www.doxygen.nl/manual/starting.html). See the docs folder or generate it yourself using the provided Doxyfile. The header file contains special information that you can read as well.
 
 ### Contributing
 
