@@ -87,6 +87,18 @@ int DRemove( DynamicArray* array, int index )
 
 // Utility Operations
 
+int DFree( DynamicArray* array )
+{
+    free(array->data);
+
+    array->data = NULL;
+    
+    array->size = 0;
+    array->capacity = 0;
+
+    return SUCCESS;
+}
+
 int DSize( DynamicArray* array )
 {
     return array->size;

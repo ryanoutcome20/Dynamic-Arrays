@@ -78,6 +78,15 @@ int DRemove( DynamicArray* array, int index );
 // Utility Operations
 
 /**
+ * DFree - Frees the memory in the array. Useful for if the array is completely outlived its use.
+ *
+ * @array: The dynamic array you want to free.
+ *
+ * @return: A DReturns enumerator which will give you the status of the operation.
+ */
+int DFree( DynamicArray* array );
+
+/**
  * DSize - Gets the total size of the dynamic array. Will be the total allocated not really the total currently stored.
  *
  * @array: The dynamic array you want the size of.
