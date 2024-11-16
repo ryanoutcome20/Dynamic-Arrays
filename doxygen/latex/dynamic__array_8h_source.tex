@@ -1,0 +1,61 @@
+\doxysection{dynamic\+\_\+array.\+h}
+\hypertarget{dynamic__array_8h_source}{}\label{dynamic__array_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{enum}\ DReturns}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \textcolor{comment}{//\ Passed.}}
+\DoxyCodeLine{00008\ \ \ \ SUCCESS\ =\ 1,}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \textcolor{comment}{//\ Failed\ to\ malloc.}}
+\DoxyCodeLine{00011\ \ \ \ OUT\_OF\_MEMORY\ =\ 2,}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \textcolor{comment}{//\ You\ gave\ a\ number\ out\ of\ bounds.}}
+\DoxyCodeLine{00014\ \ \ \ OUT\_OF\_BOUNDS\ =\ 3,}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \textcolor{comment}{//\ You\ gave\ an\ object\ that\ doesn't\ equal\ the\ element\_size.}}
+\DoxyCodeLine{00017\ \ \ \ \textcolor{comment}{//\ Typically\ happens\ when\ you\ give\ an\ object\ the\ array\ was}}
+\DoxyCodeLine{00018\ \ \ \ \textcolor{comment}{//\ not\ made\ for.}}
+\DoxyCodeLine{00019\ \ \ \ INVALID\_OBJECT\ =\ 4,}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \textcolor{comment}{//\ The\ array\ is\ empty.}}
+\DoxyCodeLine{00022\ \ \ \ EMPTY\ =\ 5}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00026\ \ \ \ \textcolor{comment}{//\ Pointer\ to\ the\ array.}}
+\DoxyCodeLine{00027\ \ \ \ \textcolor{keywordtype}{void}*\ data;\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \textcolor{comment}{//\ Number\ of\ elements\ currently\ in\ the\ array.}}
+\DoxyCodeLine{00030\ \ \ \ \textcolor{keywordtype}{int}\ size;}
+\DoxyCodeLine{00031\ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \textcolor{comment}{//\ Capacity\ of\ the\ array.}}
+\DoxyCodeLine{00033\ \ \ \ \textcolor{keywordtype}{int}\ capacity;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \textcolor{comment}{//\ Size\ of\ each\ element.}}
+\DoxyCodeLine{00036\ \ \ \ \textcolor{keywordtype}{size\_t}\ element\_size;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \textcolor{comment}{//\ Should\ we\ be\ allowed\ to\ shrink\ the\ array\ when\ the\ highest}}
+\DoxyCodeLine{00039\ \ \ \ \textcolor{comment}{//\ index\ is\ less\ than\ 25\%\ of\ the\ total\ allocated\ space?\ }}
+\DoxyCodeLine{00040\ \ \ \ \textcolor{comment}{//\ Act\ like\ this\ is\ a\ bool\ if\ you\ are\ using\ stdbool.}}
+\DoxyCodeLine{00041\ \ \ \ \textcolor{keywordtype}{int}\ shrink;}
+\DoxyCodeLine{00042\ \}\ \mbox{\hyperlink{struct_dynamic_array}{DynamicArray}};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{comment}{//\ Basic\ Operations}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{int}\ DInitialize\ (\mbox{\hyperlink{struct_dynamic_array}{DynamicArray}}*\ array,\ \textcolor{keywordtype}{size\_t}\ element\_size,\ \textcolor{keywordtype}{int}\ capacity);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00070\ \textcolor{keywordtype}{int}\ DAdd(\ \mbox{\hyperlink{struct_dynamic_array}{DynamicArray}}*\ array,\ \textcolor{keywordtype}{void}*\ \textcolor{keywordtype}{object}\ );}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00081\ \textcolor{keywordtype}{int}\ DRemove(\ \mbox{\hyperlink{struct_dynamic_array}{DynamicArray}}*\ array,\ \textcolor{keywordtype}{int}\ index\ );}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{comment}{//\ Utility\ Operations}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00092\ \textcolor{keywordtype}{int}\ DSize(\ \mbox{\hyperlink{struct_dynamic_array}{DynamicArray}}*\ array\ );}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00105\ \textcolor{keywordtype}{int}\ DIndex(\ \mbox{\hyperlink{struct_dynamic_array}{DynamicArray}}*\ array,\ \textcolor{keywordtype}{int}\ index,\ \textcolor{keywordtype}{void}*\ value\ );}
+
+\end{DoxyCode}
